@@ -1,0 +1,30 @@
+@BASEURL=http://localhost:9001/api/auth
+@TOKEN=
+
+### Login
+POST {{BASEURL}}/login
+Content-Type: application/json
+
+{
+  "email": "test@mail.com",
+  "password": "password"
+}
+
+### Register
+POST {{BASEURL}}/register
+Content-Type: application/json
+
+{
+  "name": "test",
+  "email": "test@mail.com",
+  "password": "password",
+  "confirm_password": "password"
+}
+
+### Profile
+GET {{BASEURL}}/profile
+Cookie: jwt={{TOKEN}}j
+
+### Logout
+GET {{BASEURL}}/logout
+Cookie: jwt={{TOKEN}}j

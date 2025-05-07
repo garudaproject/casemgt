@@ -1,0 +1,21 @@
+{
+	"name": "casemgt",
+	"description": "Case Management and Collaborations for digital forensics.",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "turbo dev",
+		"build": "turbo build",
+		"lint": "turbo lint",
+		"format": "biome check --fix --unsafe"
+	},
+	"workspaces": ["./apps/*"],
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"turbo": "^2.5.2"
+	},
+	"packageManager": "pnpm@10.10.0",
+	"engines": {
+		"node": ">=20"
+	}
+}
